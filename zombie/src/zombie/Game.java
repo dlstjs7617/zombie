@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Game {
 	private Scanner sc;
 	
+	private final int RUN = 1;
+	private final int HEAL = 2;
+	
 	private Hero hero;
 	private Zombie zombie;
 	private Boss boss;
@@ -45,15 +48,25 @@ public class Game {
 		
 		return number;
 	}
+	
 	private void printMenu() {
 		System.out.println("1.전진하기");
 		System.out.println("2.물약먹기");
+	}
+	
+	private void selectMenu(int sel) {
+		if(sel == RUN)
+			;
+		else if(sel == HEAL)
+			;
 	}
 	
 	private void gameRun() {
 		while(isRun()) {
 			printMenu();
 			int select = inputNumber("선택");
+			selectMenu(select);
+			
 		}
 	}
 	
