@@ -37,6 +37,14 @@ abstract  class Unit {
 		}
 	}
 	
+	public boolean isDead() {
+		return isDead;
+	}
+
+	public void setDead(boolean isDead) {
+		this.isDead = isDead;
+	}
+
 	@Override
 	public String toString() {
 		return String.format("%s : [%d/%d]", this.name, this.hp, this.MAX_HP);
