@@ -13,8 +13,6 @@ public class Zombie extends Unit{
 		System.out.printf("%s가 %d의 공격!!\n %s", this, damage, unit);
 		
 		if(unit.getHp() <= 0) {
-			unit.setHp(0);
-			unit.setDead();
 			System.out.println(unit + "이" +this.getName() + "의 공격에 사망하였습니다.");
 		}else {
 			System.out.println(unit);
