@@ -33,6 +33,10 @@ abstract  class Unit {
 			this.isDead = true;
 		}
 	}
+	
+	public void setHpHeal() {
+		this.hp += 50;
+	}
 
 	public void setLocationPlus() {
 		this.location++;
