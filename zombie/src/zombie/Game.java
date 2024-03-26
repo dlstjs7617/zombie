@@ -119,21 +119,26 @@ public class Game {
 		
 	}
 	
-	private void selectMenu(int sel) {
+	private boolean selectMenu(int sel) {
 		if(sel == RUN)
 			forward();
 		else if(sel == EXIT)
-			;
+			return false;
+		
+		return true;
 	}
 	
 	private void gameRun() {
 		while(isRun()) {
 			System.out.println(hero);
 			printMenu();
-			int select = inputNumber("선택");
-			selectMenu(select);
 			
+			int select = inputNumber("선택");
+			
+			if(!selectMenu(select))
+				break;
 		}
+		System.out.println("스코어 : " + hero.getLocation());
 	}
 	
 	
