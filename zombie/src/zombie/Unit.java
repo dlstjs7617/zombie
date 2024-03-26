@@ -41,8 +41,8 @@ abstract  class Unit {
 		return isDead;
 	}
 
-	public void setDead(boolean isDead) {
-		this.isDead = isDead;
+	public void setDead() {
+		this.isDead = true;
 	}
 
 	@Override
