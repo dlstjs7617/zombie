@@ -27,7 +27,7 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
-			this.exp += 10;
+			this.exp += 50;
 		}else {
 			System.out.println(enemy);
 		}
@@ -38,7 +38,7 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
-			this.exp += 5;
+			this.exp += 20;
 		}else {
 			System.out.println(enemy);
 		}
