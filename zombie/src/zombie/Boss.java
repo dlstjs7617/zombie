@@ -31,6 +31,17 @@ public class Boss extends Zombie implements bossMonster{
 		}
 	}
 	
+	private void nomalAttack(int damage, Unit charater) {
+		System.out.println("보스의 공격 : " + damage);
+		charater.setHp(damage);
+		
+		if(charater.getHp() <= 0) {
+			System.out.println(charater.getName() +"이 " + getName() +"에 의해 사망하셨습니다");
+		}else {
+			System.out.println(charater);
+		}
+	}
+	
 	public void attack(Unit charater) {
 		int damage = ran.nextInt(10)+5;
 		
@@ -39,14 +50,7 @@ public class Boss extends Zombie implements bossMonster{
 		if(critical == CRITICAL) {
 			criticalAttack(damage, charater);
 		}else {
-			System.out.println("보스의 공격 : " + damage);
-			charater.setHp(damage);
-			
-			if(charater.getHp() <= 0) {
-				System.out.println(charater.getName() +"이 " + getName() +"에 의해 사망하셨습니다");
-			}else {
-				System.out.println(charater);
-			}
+			nomalAttack(damage, charater);
 		}
 	}
 	
