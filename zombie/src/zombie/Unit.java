@@ -6,6 +6,9 @@ abstract  class Unit {
 	private String name;
 	public final int MAX_HP;
 	private int hp;
+	
+	private int level;
+
 	private int location;
 	private boolean isDead;
 	
