@@ -8,6 +8,9 @@ public class Game {
 	private final int RUN = 1;
 	private final int EXIT = 2;
 	
+	private final int ATTACK = 1; 
+	private final int HEAL = 2; 
+	
 	private Scanner sc;
 	private Random ran;
 	private Hero hero;
@@ -56,15 +59,32 @@ public class Game {
 		System.out.println("1.전진하기");
 		System.out.println("2.종료하기");
 	}
-	
+
+	private void zombieFight() {
+		createZombie();
+		while(zombie.isDead() || hero.isDead()) {
+			printFightMenu();
+			int sel = inputNumber("선택");
+			
+			if(sel == ATTACK)
+				hero.attack(zombie);
+			else if(sel == HEAL) {
+				hero.setHpHeal();
+				System.out.println("50의 체력을 회복하셨습니다.");
+			}
+			
+		}
+	}
 	
 	private void forward() {
 		int encounter = ran.nextInt(10)+1;
 		
 		if(encounter == 1) {
 			zombieFight();
+			hero.setLocationPlus();
 		}else if(encounter == 5) {
 			bossFight();
+			hero.setLocationPlus();
 		}else {
 			hero.setLocationPlus();
 			System.out.println(hero.getName() + "은 전진했습니다.");
