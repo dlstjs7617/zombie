@@ -18,6 +18,7 @@ abstract  class Unit {
 		this.name = name;
 		this.MAX_HP = hp;
 		this.hp = hp;
+		this.level = 1;
 		ran = new Random();
 	}
 	
@@ -43,7 +44,15 @@ abstract  class Unit {
 			this.hp = this.MAX_HP;
 		}
 	}
+	
+	public int getLevel() {
+		return this.level;
+	}
 
+	public void setLevel() {
+		this.level++;
+	}
+	
 	public void setLocationPlus() {
 		this.location++;
 	}
