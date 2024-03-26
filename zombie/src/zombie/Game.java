@@ -59,6 +59,11 @@ public class Game {
 		System.out.println("1.전진하기");
 		System.out.println("2.종료하기");
 	}
+	
+	private void printFightMenu() {
+		System.out.println("1.공격하기");
+		System.out.println("2.물약먹기");
+	}
 
 	private void zombieFight() {
 		createZombie();
