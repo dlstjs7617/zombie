@@ -7,7 +7,7 @@ public class Zombie extends Unit{
 	}
 	
 	public void attack(Unit unit) {
-		int damage = ran.nextInt(9)+1;
+		int damage = ran.nextInt(10)+1;
 		
 		unit.setHp(damage);
 		System.out.printf("%s가 %d의 공격!!\n %s", this, damage, unit);
