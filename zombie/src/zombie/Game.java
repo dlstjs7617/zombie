@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Game {
 	
 	private final int RUN = 1;
-	private final int HEAL = 2;
+	private final int EXIT = 2;
 	
 	private Scanner sc;
 	private Random ran;
@@ -54,8 +54,9 @@ public class Game {
 	
 	private void printMenu() {
 		System.out.println("1.전진하기");
-		System.out.println("2.물약먹기");
+		System.out.println("2.종료하기");
 	}
+	
 	
 	private void forward() {
 		int encounter = ran.nextInt(10)+1;
@@ -75,7 +76,7 @@ public class Game {
 	private void selectMenu(int sel) {
 		if(sel == RUN)
 			forward();
-		else if(sel == HEAL)
+		else if(sel == EXIT)
 			;
 	}
 	
