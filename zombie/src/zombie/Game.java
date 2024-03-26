@@ -1,6 +1,10 @@
 package zombie;
 
+import java.util.Scanner;
+
 public class Game {
+	private Scanner sc = new Scanner(System.in);
+	
 	private Hero hero;
 	private Zombie zombie;
 	private Boss boss;
