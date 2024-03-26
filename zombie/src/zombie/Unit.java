@@ -18,16 +18,12 @@ abstract  class Unit {
 		ran = new Random();
 	}
 	
-	public void setLocationPlus() {
-		this.location++;
-	}
-	
-	public int getLocation() {
-		return location;
+	public String getName() {
+		return this.name;
 	}
 	
 	public int getHp() {
-		return getHp();
+		return this.hp;
 	}
 	
 	public void setHp(int damage) {
@@ -35,6 +31,14 @@ abstract  class Unit {
 		if(this.hp <= 0) {
 			this.isDead = true;
 		}
+	}
+
+	public void setLocationPlus() {
+		this.location++;
+	}
+	
+	public int getLocation() {
+		return location;
 	}
 	
 	public boolean isDead() {
