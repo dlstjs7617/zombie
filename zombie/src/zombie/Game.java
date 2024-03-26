@@ -66,7 +66,9 @@ public class Game {
 	}
 
 	private void zombieFight() {
+		System.out.println(zombie.getName() + "와 조우했습니다!");
 		createZombie();
+		
 		while(zombie.isDead() || hero.isDead()) {
 			printFightMenu();
 			int sel = inputNumber("선택");
@@ -80,6 +82,25 @@ public class Game {
 			
 		}
 	}
+	
+	private void bossFight() {
+		System.out.println(boss.getName() + "와 조우했습니다!");
+		createBoss();
+		
+		while(boss.isDead() || hero.isDead()) {
+			printFightMenu();
+			int sel = inputNumber("선택");
+			
+			if(sel == ATTACK)
+				hero.attack(boss);
+			else if(sel == HEAL) {
+				hero.setHpHeal();
+				System.out.println("50의 체력을 회복하셨습니다.");
+			}
+			
+		}
+	}
+	
 	
 	private void forward() {
 		int encounter = ran.nextInt(10)+1;
@@ -107,6 +128,7 @@ public class Game {
 	
 	private void gameRun() {
 		while(isRun()) {
+			System.out.println(hero);
 			printMenu();
 			int select = inputNumber("선택");
 			selectMenu(select);
