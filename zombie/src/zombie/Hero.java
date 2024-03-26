@@ -8,6 +8,10 @@ public class Hero extends Unit{
 		super(name, hp);
 	}
 	
+	public int getExp() {
+		return this.exp;
+	}
+	
 	public void setExp() {
 		this.exp = 0;
 	}
