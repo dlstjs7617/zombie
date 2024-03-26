@@ -4,6 +4,7 @@ public class Game {
 	private Hero hero;
 	private Zombie zombie;
 	private Boss boss;
+	
 	private Game() {
 		hero = new Hero("주인공", 400);
 	}
@@ -23,7 +24,7 @@ public class Game {
 	}
 	
 	private boolean isRun() {
-		
+		return hero.isDead() == false ? true : false;
 	}
 	
 	private void printMenu() {
@@ -32,7 +33,10 @@ public class Game {
 	}
 	
 	private void gameRun() {
-		printMenu();
+		while(isRun()) {
+			printMenu();
+			
+		}
 	}
 	
 	
