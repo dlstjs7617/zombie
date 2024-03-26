@@ -19,6 +19,7 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
+			this.exp += 10;
 		}else {
 			System.out.println(enemy);
 		}
@@ -29,13 +30,14 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
+			this.exp += 5;
 		}else {
 			System.out.println(enemy);
 		}
 	}
 	
 	public void attack(Unit enemy) {
-		int damage = ran.nextInt(30)+10;
+		int damage = ran.nextInt(30)+10 + (this.getLevel*3);
 		System.out.println("주인공의 공격 : " + damage);
 		
 		if(enemy instanceof BossMonster) {
