@@ -1,5 +1,7 @@
 package zombie;
 
+import java.util.Random;
+
 abstract  class Unit {
 	private String name;
 	public final int MAX_HP;
@@ -7,11 +9,13 @@ abstract  class Unit {
 	private int location;
 	private boolean isDead;
 	
+	Random ran;
 	
 	public Unit(String name, int hp) {
 		this.name = name;
 		this.MAX_HP = hp;
 		this.hp = hp;
+		ran = new Random();
 	}
 	
 	public void setLocationPlus() {
