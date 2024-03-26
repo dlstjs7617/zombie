@@ -3,7 +3,7 @@ package zombie;
 import java.util.Scanner;
 
 public class Game {
-	private Scanner sc = new Scanner(System.in);
+	private Scanner sc;
 	
 	private Hero hero;
 	private Zombie zombie;
@@ -11,6 +11,7 @@ public class Game {
 	
 	private Game() {
 		hero = new Hero("주인공", 400);
+		sc = new Scanner(System.in);
 	}
 	
 	private static Game instance = new Game();
@@ -30,7 +31,20 @@ public class Game {
 	private boolean isRun() {
 		return hero.isDead() == false ? true : false;
 	}
-	
+
+	private int inputNumber(String message) {
+		int number = -1;
+		
+		System.out.print(message + " : ");
+		try {
+			String input = sc.next();
+			number = Integer.parseInt(input);
+		} catch (Exception e) {
+			System.err.println("숫자만 입력");
+		}
+		
+		return number;
+	}
 	private void printMenu() {
 		System.out.println("1.전진하기");
 		System.out.println("2.물약먹기");
@@ -39,7 +53,7 @@ public class Game {
 	private void gameRun() {
 		while(isRun()) {
 			printMenu();
-			
+			int select = inputNumber("선택");
 		}
 	}
 	
