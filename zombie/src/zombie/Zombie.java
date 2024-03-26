@@ -3,7 +3,7 @@ package zombie;
 public class Zombie extends Unit{
 	
 	public Zombie(String name, int hp) {
-		super("일반좀비", 100);
+		super(name, hp);
 	}
 	
 	public void attack(Unit unit) {
