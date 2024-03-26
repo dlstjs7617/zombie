@@ -69,7 +69,7 @@ public class Game {
 		createZombie();
 		System.out.println(zombie.getName() + "와 조우했습니다!");
 		
-		while(zombie.isDead() || hero.isDead()) {
+		while(!zombie.isDead() || !hero.isDead()) {
 			printFightMenu();
 			int sel = inputNumber("선택");
 			
@@ -87,7 +87,7 @@ public class Game {
 		createBoss();
 		System.out.println(boss.getName() + "와 조우했습니다!");
 		
-		while(boss.isDead() || hero.isDead()) {
+		while(!boss.isDead() || !hero.isDead()) {
 			printFightMenu();
 			int sel = inputNumber("선택");
 			
