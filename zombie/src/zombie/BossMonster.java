@@ -1,5 +1,5 @@
 package zombie;
 
-public interface bossMonster {
+public interface BossMonster {
 
 }
