@@ -1,13 +1,15 @@
 package zombie;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-	private Scanner sc;
 	
 	private final int RUN = 1;
 	private final int HEAL = 2;
 	
+	private Scanner sc;
+	private Random ran;
 	private Hero hero;
 	private Zombie zombie;
 	private Boss boss;
@@ -15,6 +17,7 @@ public class Game {
 	private Game() {
 		hero = new Hero("주인공", 400);
 		sc = new Scanner(System.in);
+		ran = new Random();
 	}
 	
 	private static Game instance = new Game();
@@ -54,9 +57,24 @@ public class Game {
 		System.out.println("2.물약먹기");
 	}
 	
+	private void forward() {
+		int encounter = ran.nextInt(10)+1;
+		
+		if(encounter == 1) {
+			zombieFight();
+		}else if(encounter == 5) {
+			bossFight();
+		}else {
+			hero.setLocationPlus();
+			System.out.println(hero.getName() + "은 전진했습니다.");
+		}
+		
+		
+	}
+	
 	private void selectMenu(int sel) {
 		if(sel == RUN)
-			;
+			forward();
 		else if(sel == HEAL)
 			;
 	}
