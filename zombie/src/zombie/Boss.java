@@ -1,6 +1,6 @@
 package zombie;
 
-public class Boss extends Zombie{
+public class Boss extends Zombie implements bossMonster{
 	private int shield;
 	
 	public Boss(String name, int hp, int shield) {
