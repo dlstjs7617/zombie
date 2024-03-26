@@ -36,6 +36,9 @@ abstract  class Unit {
 	
 	public void setHpHeal() {
 		this.hp += 50;
+		if(this.hp > this.MAX_HP) {
+			this.hp = this.MAX_HP;
+		}
 	}
 
 	public void setLocationPlus() {
