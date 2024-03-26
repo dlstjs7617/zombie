@@ -66,8 +66,8 @@ public class Game {
 	}
 
 	private void zombieFight() {
-		System.out.println(zombie.getName() + "와 조우했습니다!");
 		createZombie();
+		System.out.println(zombie.getName() + "와 조우했습니다!");
 		
 		while(zombie.isDead() || hero.isDead()) {
 			printFightMenu();
@@ -84,8 +84,8 @@ public class Game {
 	}
 	
 	private void bossFight() {
-		System.out.println(boss.getName() + "와 조우했습니다!");
 		createBoss();
+		System.out.println(boss.getName() + "와 조우했습니다!");
 		
 		while(boss.isDead() || hero.isDead()) {
 			printFightMenu();
