@@ -37,7 +37,7 @@ public class Boss extends Zombie{
 			charater.setHp(damage);
 			
 			if(charater.getHp() <= 0) {
-				System.out.println(charater.getName() +"이 " + getName() +"에 의해 사망하샸습니다");
+				System.out.println(charater.getName() +"이 " + getName() +"에 의해 사망하셨습니다");
 			}else {
 				System.out.println(charater);
 			}
