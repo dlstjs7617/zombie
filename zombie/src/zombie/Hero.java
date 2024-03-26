@@ -8,6 +8,10 @@ public class Hero extends Unit{
 		super(name, hp);
 	}
 	
+	public void setExp() {
+		this.exp = 0;
+	}
+	
 	private void bossAttack(int damage, Unit enemy) {
 		Boss boss = (Boss)enemy;
 		
@@ -37,7 +41,7 @@ public class Hero extends Unit{
 	}
 	
 	public void attack(Unit enemy) {
-		int damage = ran.nextInt(30)+10 + (this.getLevel*3);
+		int damage = ran.nextInt(30)+10 + (this.getLevel()*3);
 		System.out.println("주인공의 공격 : " + damage);
 		
 		if(enemy instanceof BossMonster) {
