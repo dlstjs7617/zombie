@@ -103,7 +103,7 @@ public class Game {
 				System.out.println("50의 체력을 회복하셨습니다.");
 				
 			}
-			if(!zombie.isDead()) {
+			if(!boss.isDead()) {
 				boss.attack(hero);				
 			}
 			System.out.println();
