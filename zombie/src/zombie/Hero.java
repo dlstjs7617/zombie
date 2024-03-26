@@ -7,7 +7,7 @@ public class Hero extends Unit{
 	}
 	
 	public void attack(Unit enemy) {
-		int damage = ran.nextInt(20)+10;
+		int damage = ran.nextInt(30)+10;
 		System.out.println("주인공의 공격 : " + damage);
 		
 		if(enemy instanceof bossMonster) {
