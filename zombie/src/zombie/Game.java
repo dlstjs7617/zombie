@@ -134,7 +134,7 @@ public class Game {
 	
 	private void gameRun() {
 		while(isRun()) {
-			System.out.println(hero);
+			System.out.println(hero + "이동거리 : " + hero.getLocation());
 			printMenu();
 			
 			int select = inputNumber("선택");
