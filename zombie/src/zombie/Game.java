@@ -11,6 +11,8 @@ public class Game {
 	private final int ATTACK = 1; 
 	private final int HEAL = 2; 
 	
+	private final int LEVEL_UP = 100;
+	
 	private Scanner sc;
 	private Random ran;
 	private Hero hero;
@@ -137,6 +139,11 @@ public class Game {
 			hero.setLocationPlus();
 			System.out.println(hero.getName() + "은 전진했습니다.");
 		}
+		if(hero.getExp() >= 100) {
+			hero.setExp();
+			hero.setLevel();
+			System.out.println("레벨업! 최소공격력이 3상승했습니다");
+		}
 		
 	}
 	
@@ -151,6 +158,8 @@ public class Game {
 	
 	private void gameRun() {
 		while(isRun()) {
+			System.out.println("현재 레벨 :"+ hero.getLevel());
+			System.out.printf("경험치 : [%d/%d] \n",hero.getExp(),LEVEL_UP);
 			System.out.println(hero + "\n이동거리 : " + hero.getLocation());
 			printMenu();
 			
