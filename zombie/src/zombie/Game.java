@@ -20,10 +20,13 @@ public class Game {
 		Boss boss = new Boss("보스좀비", 500, 10);
 	}
 	
-	
+	private void printMenu() {
+		System.out.println("1.전진하기");
+		System.out.println("2.물약먹기");
+	}
 	
 	private void gameRun() {
-		
+		printMenu();
 	}
 	
 	
