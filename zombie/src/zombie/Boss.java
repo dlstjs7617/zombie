@@ -1,6 +1,6 @@
 package zombie;
 
-public class Boss extends Zombie implements bossMonster{
+public class Boss extends Zombie implements BossMonster{
 	
 	private final int CRITICAL = 1;
 	private int shield;
