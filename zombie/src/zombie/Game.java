@@ -21,7 +21,13 @@ public class Game {
 	}
 	
 	
-	public void run() {
+	
+	private void gameRun() {
 		
+	}
+	
+	
+	public void run() {
+		gameRun();
 	}
 }
