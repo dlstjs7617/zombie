@@ -36,7 +36,7 @@ public class Game {
 	}
 	
 	private void createBoss() {
-		boss = new Boss("보스좀비", 500, 5);
+		boss = new Boss("보스좀비", 200, 5);
 	}
 	
 	private boolean isRun() {
