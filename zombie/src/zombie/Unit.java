@@ -12,7 +12,7 @@ abstract  class Unit {
 	private int location;
 	private boolean isDead;
 	
-	private Random ran;
+	protected Random ran;
 	
 	public Unit(String name, int hp) {
 		this.name = name;
