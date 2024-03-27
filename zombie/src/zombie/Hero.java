@@ -27,6 +27,7 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
+			System.out.println("50의 경험치를 획득");
 			this.exp += 50;
 		}else {
 			System.out.println(enemy);
@@ -38,6 +39,7 @@ public class Hero extends Unit{
 		
 		if(enemy.getHp() <= 0) {
 			System.out.println(enemy.getName() + "을 처치하셨습니다");
+			System.out.println("20의 경험치를 획득");
 			this.exp += 20;
 		}else {
 			System.out.println(enemy);
@@ -45,7 +47,7 @@ public class Hero extends Unit{
 	}
 	
 	public void attack(Unit enemy) {
-		int damage = ran.nextInt(30)+10 + (this.getLevel()*3);
+		int damage = ran.nextInt(40)+10 + (this.getLevel()*3);
 		System.out.println("주인공의 공격 : " + damage);
 		
 		if(enemy instanceof Boss) {
