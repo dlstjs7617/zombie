@@ -68,7 +68,9 @@ abstract  class Unit {
 	public void setDead() {
 		this.isDead = true;
 	}
-
+	
+	abstract public void attack(Unit unit);
+	
 	@Override
 	public String toString() {
 		return String.format("%s : [%d/%d]", this.name, this.hp, this.MAX_HP);
