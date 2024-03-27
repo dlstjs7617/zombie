@@ -6,4 +6,4 @@
 ![diagram](images/RPG_최종본.jpg)
 
 > Demo
-![diagram]()
+![diagram](images/Run.gif)
