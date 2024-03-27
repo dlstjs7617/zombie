@@ -48,7 +48,7 @@ public class Hero extends Unit{
 		int damage = ran.nextInt(30)+10 + (this.getLevel()*3);
 		System.out.println("주인공의 공격 : " + damage);
 		
-		if(enemy instanceof BossMonster) {
+		if(enemy instanceof Boss) {
 			bossAttack(damage, enemy);
 		}else {
 			nomalAttack(damage, enemy);
